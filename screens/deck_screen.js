@@ -5,14 +5,20 @@ import { Card,Button } from 'react-native-elements';
 import { createStackNavigator, navigationOptions } from 'react-navigation';
 import {favData} from '../src/favorites_data'
 
-
 const backgroundColorsLight = ['#ffac33','#FFB3CF','#00ced1','#8bc34a','#cddc39','#f44336','#26a69a', '#e64a19']
 const backgroundColorsDark = ['#571C3C','#110c63','#176600','#9b2e2e','#96660d','#7e1a82']
 
 export const DATA = [
-  [1,'azlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekaz' ],
-  [2,"azlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekaz 2"],
-  [3,"azlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekazazlmkezaeaokeazoekaz 3"],
+  [1,'A l"affut du moindre écu, mon frère si yavait des bites par terre yen a qui marcheraient sur le cul' ],
+  [2,"Ca commence par du Roméo et Juliette, ca finit par du Jackie et Michelle"],
+  [3,"Suce ma bite pour la Saint-Valentin"],
+  [4,"Avant j'étais moche dans la tess, aujourd'hui j'plais a Eva Mendes"],
+  [5,"Si jtraine en bas d'chez toi jfais chuter l'prix de l'immobilier"],
+  [6,"Comme un avant gout de l'enfer avec l'air conditionné"],
+  [7,"Elle m'a dit occupe toi de mon cas, vu qu'elle sentait la mangue j'lai prise par derrière comme un mangas"],
+  [8,"Maîtrise lancinante sentiments en ciments, sinon dans six and on m'retrouve ciseaux dans l'crâne dans l'sang gisant"],
+  [9,"Jt'échange ta montre contre une pêche bouillante"],
+  [10,"Comment ne pas être un pitbull, quand la vie est une chienne"],
 ];
 
 
@@ -27,7 +33,7 @@ constructor(props) {
 
     static navigationOptions = ({ navigation }) => {
         return {
-          title: "Citations",
+          title: "Blagues",
           headerRight: (
             <Button
               onPress={()=>{navigation.navigate('Fav')}}
@@ -39,7 +45,7 @@ constructor(props) {
       };
 
      
-     
+    
 
   renderCard(item) {
     let lightOrDark = Math.floor((Math.random() * 2)+1);
@@ -66,13 +72,12 @@ constructor(props) {
     return (
       <Card title="Cette liste est terminée">
         <Text style={{ marginBottom: 10 }}>
-          Alors, ca vous a plus ?
+          Ca vous a plus ?
         </Text>
         <Button
           backgroundColor="#03A9F4"
           title="J'en veux encore!!!"
-          onPress={()=>{this.renderCard()}}
-        />
+               />
       </Card>
     );
   }
